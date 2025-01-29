@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inquiry Form</title>
+    <link rel="stylesheet" href="body.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="productForm">
+            <h2>Who will be buying the product?</h2>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+
+            <h2>Tell us about the product you desire</h2>
+            <label for="product">Refurbished Product</label>
+            <select id="product" name="product" required>
+                <option value="">Select a product</option>
+                <option value="laptop">Laptop</option>
+                <option value="phone">Phone</option>
+                <option value="tablet">Tablet</option>
+            </select>
+
+            <label for="configuration">Product Configuration</label>
+            <select id="configuration" name="configuration" required>
+                <option value="">Select configuration</option>
+            </select>
+
+            <label for="deliveryMode">Mode of Delivery</label>
+            <select id="deliveryMode" name="deliveryMode" required>
+                <option value="address">Delivery at an address</option>
+                <option value="pickup">Pickup from the office</option>
+            </select>
+
+            <label for="deliveryDate">Delivery Date Expectations</label>
+            <input type="date" id="deliveryDate" name="deliveryDate" required>
+
+            <div id="deliveryDetails" style="display: none;">
+                <h2>Delivery Details</h2>
+                <label for="deliveryAddress">Delivery Address</label>
+                <input type="text" id="deliveryAddress" name="deliveryAddress">
+
+                <label for="city">City</label>
+                <input type="text" id="city" name="city">
+
+                <label for="state">State</label>
+                <input type="text" id="state" name="state">
+
+                <label for="pinCode">Pin Code</label>
+                <input type="text" id="pinCode" name="pinCode">
+            </div>
+
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments" name="comments"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
