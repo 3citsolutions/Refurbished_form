@@ -5,10 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Inquiry Form</title>
     <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo"> 
+            <a href="https://3citsolutions.com/"><img src="https://i.ibb.co/TxrrNZ30/Untitled-design-10-1980x881.png" alt="logo"></a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="https://3citsolutions.com/">Home</a></li>
+            <li class="dropdown">
+                <a href="#">About Us ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://3citsolutions.com/about-us/">Company</a></li>
+                    <li><a href="https://3citsolutions.com/our-team/">Our Team</a></li>
+                    <li><a href="https://3citsolutions.com/career/">Career</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Solutions ▼</a>
+                <ul class="dropdown-menu">
+                    <li class="sub-dropdown">
+                        <a href="#">Infrastructure Solutions ▸</a>
+                        <ul class="sub-dropdown-menu">
+                            <li><a href="https://3citsolutions.com/end-user-devices/">End User & Devices</a></li>
+                            <li><a href="https://3citsolutions.com/data-center/">Data Center Solutions</a></li>
+                            <li><a href="https://3citsolutions.com/it-security-solutions/">IT Security Solutions</a></li>
+                            <li><a href="https://3citsolutions.com/networking-solutions/">Networking Solutions</a></li>
+                            <li><a href="https://3citsolutions.com/computer-accessories/">Computer Accessories</a></li>
+                            <li><a href="https://3citsolutions.com/audio-video-solutions/">Audio Video Solutions</a></li>
+                            <li><a href="https://3citsolutions.com/power-solutions/">Power Solutions</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-dropdown">
+                        <a href="#">Digital Business Solutions ▸</a>
+                        <ul class="sub-dropdown-menu">
+                            <li><a href="https://3citsolutions.com/mobility/">Mobiles Device Management</a></li>
+                            <li><a href="https://3citsolutions.com/business-software/">Business Software</a></li>
+                            <li><a href="https://3citsolutions.com/cloud-services/">Cloud Services</a></li>
+                            </ul>
+                    </li>
+                    <li class="sub-dropdown">
+                        <a href="#">Consulting Solutions ▸</a>
+                        <ul class="sub-dropdown-menu">
+                            <li><a href="https://3citsolutions.com/fms-solutions/">FMS Solutions</a></li>
+                            <li><a href="https://3citsolutions.com/it-infrastructure-renting/">IT Infrastructure Solutions</a></li>
+                            <li><a href="https://3citsolutions.com/it-managed-services/">IT Managed Services</a></li>
+                            <li><a href="https://3citsolutions.com/remote-infrastructure-management/">Remote Infrastructure Solutions</a></li>
+                            <li><a href="https://3citsolutions.com/multi-brand-hardware-break-fix/">Multi Brand Hardware Break-fix</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Investors ▼</a>
+                <ul class="dropdown-menu">
+                    <li class="sub-dropdown">
+                        <a href="#">IPO ▸</a>
+                        <ul class="sub-dropdown-menu">
+                            <li><a href="https://3citsolutions.com/drhp/">Draft Prospectus</a></li>
+                            <li><a href="https://3citsolutions.com/prospectus/">Prospectus</a></li>
+                            <li><a href="https://3citsolutions.com/abridged-prospectus/">Abridged Prospectus</a></li>
+                            <li><a href="https://3citsolutions.com/material-agreements/">Material Agreements</a></li>
+                            <li><a href="https://3citsolutions.com/general-information-document/">General Information Document</a></li>
+                            <li><a href="https://3citsolutions.com/application-form/">Application Form</a></li>
+                            <li><a href="https://3citsolutions.com/basis-of-allotment/">Basis of Allotment</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-dropdown">
+                        <a href="#">Financial ▸</a>
+                        <ul class="sub-dropdown-menu">
+                            <li><a href="https://3citsolutions.com/annual-reports/">Annual Reports</a></li>
+                            <li><a href="https://3citsolutions.com/annual-return/">Annual Return</a></li>
+                            <li><a href="https://3citsolutions.com/financial-result/">Financial Result</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://3citsolutions.com/corporate-governance-2/">Corporate Governance</a></li>
+                    <li><a href="https://3citsolutions.com/share-holding-pattern/">Share Holding Pattern</a></li>
+                    <li><a href="https://3citsolutions.com/investor-grievance/">Investor Grievance</a></li>
+                    <li><a href="https://3citsolutions.com/code-policies/">Code & Policies</a></li>
+                    <li><a href="https://3citsolutions.com/material-documents/">Maerial Documents</a></li>
+                    <li><a href="https://3citsolutions.com/announcements/">Announcements</a></li>
+                    <li><a href="https://3citsolutions.com/bse-intimation/">BSE Intimation</a></li>
+
+                </ul>
+            </li>
+            <li><a href="https://3citsolutions.com/blog/">Blog</a></li>
+            <li><a href="https://3citsolutions.com/contact-us/">Contact Us</a></li>
+        </ul>
+    </nav>
     <div class="form-container">
-        <form id="productForm" method="POST" action="https://refurbished-form-9tng.onrender.com/send-email" >
+        <form id="productForm" method="POST" action="http://localhost:3000/send-email" >
             <h2>Who will be buying the product?</h2>
            
             <label for="name">Name</label>
@@ -96,6 +189,43 @@
         </form>
         
     </div>
+    <footer>
+        <div class="footer-left">
+            <a href="https://3citsolutions.com/"><img src="https://i.ibb.co/d4r6Lxfx/3-CIT-LOGO-1-768x342.png" alt="3-CIT-LOGO"></a>
+            <p>3C IT Total Infrastructure Solutions is a pioneering force in providing end-to-end IT infrastructure solutions. With a focus on innovation, reliability, and client-centricity, we leverage cutting-edge technologies to optimize and secure your digital landscape.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h3><strong>Quick Links</strong></h3>
+            <ul>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Investor</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">News & Updates</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <h3><strong>Get In Touch</strong></h3><br>
+            <p><strong>Pune Office:</strong> <span>3C IT SOLUTIONS & TELECOMS (INDIA) LIMITED, Mundhwa, Pune, Maharashtra 411036</span></p>
+            <p><strong>Delhi Office:</strong> <span>C-1/81A, Dwarka, New Delhi-110059</span></p>
+            <p><strong>Mumbai Office:</strong> <span>Shreeji Hights, Navi Mumbai-400706</span></p>
+            <p><strong>Guwahati Office:</strong> <span>VIP Road, Assam-781036</span></p>
+            <p><strong>Manipur Office:</strong> <span>Po Tulihal-795140</span></p><br>
+            <p><strong>HR:</strong> <span>8080669082</span></p><br>
+            <p><strong>Landline:</strong> <span>02067802300</span></p><br>
+            <p><strong>Front Desk:</strong> <span>91120 57917</span></p><br>
+            <p><strong>Email:</strong> <span>admin@3citsolutions.com</span></p>
+        </div>
+    
+        <span style="font-family: Rubik, sans-serif; font-size: 17px; font-weight: 400; letter-spacing: -0.255px; text-align: center; white-space-collapse: collapse;">© 2024 3C IT SOLUTIONS &amp; TELECOMS (INDIA) LTD. ALL RIGHTS RESERVED.</span>
+    </footer>
     <script src="script.js"></script>
     
 <script>
