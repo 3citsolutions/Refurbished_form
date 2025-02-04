@@ -1,83 +1,381 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
     margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align items at the top */
-    min-height: 100vh; /* Use min-height instead of height */
-    overflow-y: auto; /* Allow scrolling if needed */
+    padding: 0;
 }
 
 .form-container {
-    width: 100%;
-    max-width: 700px;
-    background: #fff;
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #5c5c5c3b;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; /* Add margin to ensure it's not cut off */
 }
 
 h2 {
-    margin-top: 0;
+    margin-bottom: 20px;
     color: #333;
     font-size: 1.5em;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #27ae60;
     padding-bottom: 10px;
-    grid-column: span 2;
 }
 
-form {
+.form-group {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group.full-width {
+    grid-template-columns: 1fr;
 }
 
 label {
-    display: block;
-    font-weight: bold;
+    margin-bottom: 8px;
     color: #555;
-    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-input, select, textarea {
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+    box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1em;
     transition: border-color 0.3s;
 }
 
-input:focus, select:focus, textarea:focus {
-    border-color: #007bff;
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #27ae60;
     outline: none;
 }
 
 textarea {
-    grid-column: span 2;
     resize: vertical;
     min-height: 100px;
 }
 
 button {
-    grid-column: span 2;
-    padding: 12px;
-    background-color: #007bff;
+    background-color: #27ae60;
     color: #fff;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 1.1em;
     cursor: pointer;
+    font-size: 1em;
     transition: background-color 0.3s;
+    width: 100%;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #ffffff;
+    color: #000;
 }
 
-#deliveryDetails {
-    grid-column: span 2;
+@media (max-width: 768px) {
+    .form-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Change cursor to pointer (hand) for select, date, and input elements */
+select,
+input[type="date"],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    cursor: pointer;
+}
+
+/* Style the date picker */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    background-color: #27ae60;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Optional: Style the calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    background-color: #27ae60;
+}
+
+
+
+/* --- Desktop Navbar Styling --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 50px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    z-index: 1000;
+}
+/* Main Menu Items */
+.nav-list > li > a {
+    color: white; /* Ensures the main menu items stay white */
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu a, .sub-dropdown-menu a {
+    color: black; /* Ensures dropdown items stay black */
+}
+
+/* Dropdown Menu Items Hover Effect */
+.dropdown-menu a:hover, .sub-dropdown-menu a:hover {
+    color: #5e5858;
+}
+
+.navbar .logo img {
+    height: 60px;
+    width: 100%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    color: #fff;
+}
+
+.nav-list li {
+    position: relative;
+    margin: 0 15px;
+    color: #ffffff;
+}
+
+.nav-list a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.nav-list a:hover {
+    color: #141515;
+}
+
+/* Dropdown Menu */
+.dropdown-menu { 
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    color: black;
+    list-style: none;
+    padding: 0;
+    width: 165px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.sub-dropdown-menu {
+    display: none;
+    position: absolute;
+    margin-left: 130px;
+    top: 0;
+    left: 0;
+    background: white;
+    color: black;
+    list-style: none;
+    padding: 0;
+    width: 160px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+    border-radius: 5px;
+
+}
+
+.dropdown:hover, .sub-dropdown:hover {
+    color: #464848;
+}
+
+
+.dropdown:hover .dropdown-menu,
+.sub-dropdown:hover .sub-dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li, .sub-dropdown-menu li {
+    padding: 10px;
+}
+
+/* --- Hamburger Menu (Mobile & Tablet) --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: 5px 0;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        color: #000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-list > li > a {
+        color: rgb(0, 0, 0); /* Ensures the main menu items stay white */
+    }
+    
+    /* Dropdown Menu Items */
+    .dropdown-menu a, .sub-dropdown-menu a {
+        color: black; /* Ensures dropdown items stay black */
+    }
+    
+    /* Dropdown Menu Items Hover Effect */
+    .dropdown-menu a:hover, .sub-dropdown-menu a:hover {
+        color: #5e5858;
+    }
+    
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Mobile Dropdown */
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .dropdown .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: url('whatsapp-icon.png') no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+footer {
+    background-color: #f8f8f8;
+    padding: 30px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer-left {
+    max-width: 400px;
+}
+.footer-left img {
+    width: 250px;
+    height: 160px;
+}
+.footer-left p {
+    margin-top: 10px;
+    font-size: 17px;
+    color: #828282;
+}
+.footer-links ul {
+    list-style: none;
+}
+.footer-links ul li {
+    margin-bottom: 10px;
+    margin-top: 15px;
+    font-size: 16px;
+}
+.footer-links a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-weight: 600;
+}
+.footer-links a:hover {
+    color: #27ae60;
+}
+.footer-right {
+    max-width: 400px;
+}
+.footer-right p {
+    font-weight: 900;
+    margin: 5px 0;
+    transition: color 0.3s;
+}
+.footer-right p:hover {
+    color: #27ae60;
+}
+.footer-right span {
+    font-weight: 400;
+}
+.social-icons a {
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #27ae60;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-left, .footer-links, .footer-right {
+        margin-bottom: 20px;
+    }
 }
